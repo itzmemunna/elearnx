@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: linear-gradient(to right, #6EACDA, #03346E);
+            border-bottom: 2px solid black;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar .logo img {
+            height: 50px;
+            margin-right: auto;
+        }
+
+        .navbar .nav-links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex: 1;
+        }
+
+        .navbar .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .navbar .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .navbar .nav-links a:hover {
+            color: #ddd;
+        }
+
+        .container {
+            width: 50%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 30px rgba(255, 0, 255, 0.7);
+            border-radius: 15px;
+            position: relative;
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: none;
+            z-index: -1;
+            filter: blur(20px);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            background: linear-gradient(45deg, #00f0ff, #ff00ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .gender {
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .gender label {
+            margin-right: 10px;
+        }
+
+        .buttons {
+            text-align: center;
+        }
+
+        .buttons button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .buttons .submit {
+            background-color: #000000;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+
+        .buttons .submit:hover {
+            background-color: #3a00da;
+        }
+
+        .buttons .clear {
+            background-color: #1d0090;
+            color: white;
+        }
+
+        .message-box {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(255, 0, 255, 0.7);
+        }
+
+        .message {
+            margin-top: 20px;
+            color: rgb(0, 0, 88);
+            font-weight: bold;
+            font-size: 43px;
+        }
+        .footer-section {
+                                background-color: #f0f0f0; /* Light grey background */
+                                padding: 40px;
+                            }
+                            
+                            .footer-lists {
+                                display: flex;
+                                justify-content: space-between;
+                                flex-wrap: wrap;
+                                text-decoration: none;
+                            }
+                            
+                            .footer-lists div {
+                                flex: 1;
+                                margin: 20px;
+                                text-decoration: none;
+                            }
+                            
+                            .footer-lists h3 {
+                                font-size: 1.2em;
+                                color: black;
+                                font-weight: bold;
+                                margin-bottom: 10px;
+                                text-decoration: none;
+                            }
+                            
+                            .footer-lists ul {
+                                list-style-type: none;
+                                padding: 0;
+                                text-decoration: none;
+                            }
+                            
+                            .footer-lists li {
+                                font-size: 1em;
+                                color: grey;
+                                margin-bottom: 5px;
+                                text-decoration: none;
+                            }
+                            
+                            .footer-lists li a {
+                                text-decoration: none; /* Remove underlines */
+                                color: grey; /* Ensure the text color is grey */
+                            }
+                            
+                            .footer-lists li a:hover {
+                                text-decoration: underline; /* Add underlines on hover if desired */
+                            }
+                            
+                            .footer-copyright {
+                                text-align: center;
+                                margin-top: 40px;
+                                text-decoration: none;
+                            }
+                            
+                            .footer-copyright p {
+                                font-size: 1em;
+                                color: grey;
+                                text-decoration: none;
+                            }
+                            
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="https://getrapl.com/asia/wp-content/uploads/sites/4/2023/05/sa.png" alt="ElearnX Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="rewards.html">Rewards</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container" id="formContainer">
+        <h2>Registration Form</h2>
+        <form id="registrationForm">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="mobileNumber">Mobile Number:</label>
+            <select id="countryCode" name="countryCode">
+                <option value="+91">India (+91)</option>
+                <option value="+1">USA (+1)</option>
+                <option value="+44">UK (+44)</option>
+                <option value="+61">Australia (+61)</option>
+                <option value="+81">Japan (+81)</option>
+                <option value="+49">Germany (+49)</option>
+                <option value="+86">China (+86)</option>
+                <option value="+33">France (+33)</option>
+                <option value="+39">Italy (+39)</option>
+                <option value="+55">Brazil (+55)</option>
+            </select>
+            <input type="text" id="mobileNumber" name="mobileNumber" required>
+
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="country">Country:</label>
+            <select id="country" name="country" required>
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="UK">UK</option>
+                <option value="Australia">Australia</option>
+                <option value="Japan">Japan</option>
+                <option value="Germany">Germany</option>
+                <option value="China">China</option>
+                <option value="France">France</option>
+                <option value="Italy">Italy</option>
+                <option value="Brazil">Brazil</option>
+            </select>
+
+            <label for="gender">Gender:</label>
+            <div class="gender">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="Female" required>
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="Other" required>
+                <label for="other">Other</label>
+            </div>
+
+            <label for="qualification">Qualification:</label>
+            <select id="qualification" name="qualification" required>
+                <option value="10th">10th</option>
+                <option value="11th">11th</option>
+                <option value="12th">12th</option>
+                <option value="Undergraduate">Undergraduate</option>
+                <option value="Graduated">Graduated</option>
+                <option value="Post Graduated">Post Graduated</option>
+            </select>
+
+            <div class="buttons">
+                <button type="submit" class="submit">Submit</button>
+                <button type="reset" class="clear">Clear</button>
+            </div>
+        </form>
+    </div>
+    <div class="message-box" id="messageBox">
+        <div class="message" id="message">"Thank you for your interest! Our team will contact you shortly"</div>
+    </div>
+     <footer class="footer-section"> <div class="footer-lists"> <div> <h3>Get Started with AI</h3> <ul> <li>AWS & DLAI GenAI with LLMs Course</li> <li>DLAI AI For Everyone Course</li> <li>Google AI Essentials Course</li> <li>Google Cloud Introduction to Generative AI Course</li> <li>Google Prompting Essentials</li> <li>IBM AI Engineering Professional Certificate</li> <li>IBM Generative AI Fundamentals Specialization</li> <li>IBM Introduction to Artificial Intelligence (AI)</li> <li>Stanford AI in Healthcare Specialization</li> <li>DLAI Supervised Machine Learning: Regression and Classification</li> <li>Vanderbilt Prompt Engineering for ChatGPT Course</li> </ul> </div> <div> <h3>Popular Career Certificates</h3> <ul> <li>Adobe Content Creator Professional Certificate</li> <li>Google Cybersecurity Professional Certificate</li> <li>Google Data Analytics Professional Certificate</li> <li>Google Digital Marketing Professional Certificate</li> <li>Google IT Support Professional Certificate</li> <li>Google Project Management Professional Certificate</li> <li>Google UX Design Professional Certificate</li> <li>IBM Data Science Professional Certificate</li> <li>Meta Front-End Developer Professional Certificate</li> <li>Microsoft Power BI Data Analyst Professional Certificate</li> <li>All Career Certificates</li> </ul> </div> <div> <h3>Popular Subjects</h3> <ul> <li>Artificial Intelligence</li> <li>Cybersecurity</li> <li>Data Analytics</li> <li>Digital Marketing</li> <li>Generative AI</li> <li>Graphic Design</li> <li>Machine Learning</li> <li>Microsoft Excel</li> <li>Microsoft Power BI</li> <li>Project Management</li> <li>Python</li> <li>SQL</li> <li>All Courses</li> </ul> </div> <div> <h3>Popular Resources</h3> <ul> <li>High-Income Skills Worth Learning</li> <li>How to Get a PMP Certification</li> <li>Free IT Certifications and Courses</li> <li>Google Analytics Certification: Benefits and How to Get It</li> <li>Popular Cybersecurity Certifications</li> <li>Popular Data Analytics Certifications</li> <li>Popular IT Certifications</li> <li>What Does a Data Analyst Do?</li> <li>What Is the CAPM Certification</li> <li>Career Insights & Advice Hub</li> <li>Career Tools & Resource Hub</li> </ul> </div> </div> <div class="footer-copyright"> <p>&copy; 2024 Elearnx Elearnx Inc. All rights reserved.</p>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var firstName = document.getElementById('firstName').value;
+            var lastName = document.getElementById('lastName').value;
+            if (!/^[a-zA-Z]+$/.test(firstName) || !/^[a-zA-Z]+$/.test(lastName)) {
+                alert('Names should not contain numbers.');
+                return;
+            }
+            document.getElementById('formContainer').style.display = 'none';
+            document.getElementById('messageBox').style.display = 'block';
+        });
+    </script>
+</body>
+</html>

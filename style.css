@@ -1,0 +1,324 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(to right, #6EACDA,#03346E );
+    border-bottom:2px solid black;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Center the links */ flex: 1;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #ddd;
+}
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to right, rgb(255, 255, 255), #74e3ff); /* Adding back a background for better contrast */
+}
+
+.hero-content {
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-image {
+    width: 100%; /* Decreased width */
+    height: 90%; /* Auto adjust height */
+    border-radius: 20px; /* Apply border radius */
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slider-image.active {
+    opacity: 1;
+}
+
+
+
+.view-courses-button { 
+    padding: 0.8rem 1.5rem; 
+    margin-top: 1rem; 
+    border: none; 
+    background-color: #ffcc00; /* Yellow color */
+     color: #001f3f; /* Navy blue text color */
+      font-size: 1rem; 
+      font-weight: bold; 
+      cursor: pointer;
+       border-radius: 5px;
+        transition: background-color 0.3s ease-in-out;
+     } 
+     .view-courses-button:hover
+      { 
+        background-color: #e6b800; /* Darker yellow on hover */
+     }
+
+ .collaboration-section { 
+    background-color: rgba(255, 255, 255, 0.7);
+     /* Transparent white background */
+      padding: 2rem; 
+      text-align: center; 
+      position: relative; 
+      
+    } 
+      .section-heading {
+         font-size: 2rem; color: #0876e4; /* Blue color */ 
+         font-style: italic;
+          margin-bottom: 1.5rem; 
+          margin-top:-20px;
+        }
+ .logo-container
+         { 
+            overflow: hidden; 
+            white-space: nowrap;
+             padding: 1rem 0;
+            border-bottom: 0.1px solid rgba(0, 0, 0, 0.1);
+            margin-top:-20px;
+            }
+              .logo-scroll 
+              { 
+                display: inline-block;
+                
+                animation: scroll 10s linear infinite; } 
+                .logo-scroll img {
+                     margin: 0 2rem;
+                      height: 120px;
+                       vertical-align: middle;
+                     } 
+                     @keyframes scroll 
+                     { 0%
+
+                         { 
+                            transform: translateX(100%);
+                         } 100%
+                          {
+                             transform:translateX(-100%);
+                             } }
+                             * {
+                                margin: 0;
+                                padding: 0;
+                                box-sizing: border-box;
+                            }
+                            
+                            body {
+                                font-family: Arial, sans-serif;
+                            }
+                            
+                            .invest-section {
+                                background-color: rgba(245, 245, 245, 0.9); /* Transparent smoky white background */
+                                padding: 2rem;
+                                margin: 2rem auto;
+                                width: 80%;
+                                border-radius: 10px;
+                                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                            }
+                            
+                            .invest-heading {
+                                font-size: 2rem;
+                                color: black;
+                                text-align: center;
+                                margin-bottom: 2rem;
+                            }
+                            
+                            .content-container {
+                                display: flex;
+                                justify-content: center; /* Centers the content items horizontally */
+                                align-items: center; /* Centers the content items vertically */
+                                flex-wrap: wrap;
+                                gap: 2rem;
+                            }
+                            
+                            .content-item {
+                                flex: 1;
+                                min-width: 250px;
+                                text-align: center;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                            }
+                            
+                            .content-item img {
+                                max-width: 100%;
+                                height: auto;
+                                border-radius: 10px;
+                                margin-bottom: 1rem;
+                            }
+                            
+                            .blue-text {
+                                color: #1e90ff; /* Blue color */
+                            }
+                            
+                            .content-item p, .content-item h3 {
+                                margin-bottom: 1rem;
+                            }
+                            
+                            .content-item h3 {
+                                margin-bottom: 0.5rem;
+                            }
+                            .courses-container { 
+                                background-color: #F5DEB3; 
+                                padding: 2rem;
+                                 margin: 2rem auto; 
+                                 width: 90%; 
+                                 border-radius: 10px; 
+                                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                                  text-align: center; }
+                                   .courses-heading
+                                    { font-size: 2rem; 
+                                        color: black; 
+                                        margin-bottom: 2rem;
+                                     } 
+                                     .courses-content 
+                                     { display: flex;
+                                         justify-content: space-around; flex-wrap: wrap;  gap: 1rem; 
+                                        } .course-box {
+                                             background-color: white;
+                                              padding: 1rem; 
+                                              border-radius: 10px; 
+                                              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                                               width: 22%;
+                                               text-align: center;
+                                             } 
+                                             .course-box img { max-width: 100%;
+                                                 border-radius: 10px; margin-bottom: 1rem; } 
+                                                 .course-box p { font-size: 1.2rem; color: #333; }
+                            .pricing-section { display: flex; justify-content: space-between; background-color: white; padding: 20px; } .box { border: 1px solid blue; padding: 20px; width: 30%; box-sizing: border-box; box-shadow: 0 4px 8px rgba(0, 0, 255, 0.2); min-height: 500px; display: flex; flex-direction: column; justify-content: space-between; } .middle-box { position: relative; height: 100%; border: 1px solid blue; padding: 20px; width: 35%; box-sizing: border-box; box-shadow: 0 4px 8px rgba(0, 0, 255, 0.2); min-height: 500px; display: flex; flex-direction: column; justify-content: space-between; } .most-popular { background-color: blue; color: white; padding: 10px; text-align: center; font-weight: bold; position: absolute; top: -20px; left: 0; right: 0; } .price { font-size: 24px; text-align: center; margin: 20px 0; font-weight: bold; } button { background-color: blue; color: white; padding: 10px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; align-self: center;} button:hover { background-color: darkblue; } ul { list-style-type: disc; padding-left: 20px; } ul li { margin-bottom: 10px; border-bottom: 1px solid blue; /* Thin border below each bullet point */ padding-bottom: 10px; }
+                            .community-section { background-color: white; padding: 40px; text-align: center; } .community-section h1 { font-size: 2em; color: black; font-weight: bold; } .community-section h2 { font-size: 1.2em; color: grey; margin-bottom: 40px; } .testimonial { display: flex; justify-content: space-around; flex-wrap: wrap; } .profile { text-align: center; width: 30%; margin: 20px 0; box-sizing: border-box; } .profile img { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; box-shadow: 0 8px 16px rgba(0, 0, 255, 0.8); } .profile .name { color: rgb(0, 13, 255); font-weight: bold; margin-top: 10px; } .profile .location { font-size: 0.9em; color: grey; margin: 5px 0; } .profile hr { width: 50%; margin: 10px auto; border: none; border-top: 1px solid rgb(61, 20, 244); } .profile .comment {font-size: 1em; margin-top: 10px; }
+                            .join-section { display: flex; align-items: center; padding: 40px; background-color: white; } .image-container { flex: 1; padding-right: 20px; } .image-container img { width: 100%; border-radius: 10px; box-shadow: 0 8px 16px rgba(0, 0, 255, 0.5); /* Blue shadow */ } .text-container { flex: 2; text-align: left; } .text-container h1 { font-size: 2em; color: black; font-weight: bold; } .text-container p { font-size: 1.2em; color: grey; margin: 20px 0; } button { background-color: blue; color: white; padding: 15px 30px; border: none; border-radius: 5px; cursor: pointer; font-size: 1.2em; } button:hover { background-color: darkblue; }
+                            
+                            
+                            .footer-section {
+                                background-color: #f0f0f0; /* Light grey background */
+                                padding: 40px;
+                            }
+                            
+                            .footer-lists {
+                                display: flex;
+                                justify-content: space-between;
+                                flex-wrap: wrap;
+                                text-decoration: none;
+                            }
+                            
+                            .footer-lists div {
+                                flex: 1;
+                                margin: 20px;
+                                text-decoration: none;
+                            }
+                            
+                            .footer-lists h3 {
+                                font-size: 1.2em;
+                                color: black;
+                                font-weight: bold;
+                                margin-bottom: 10px;
+                                text-decoration: none;
+                            }
+                            
+                            .footer-lists ul {
+                                list-style-type: none;
+                                padding: 0;
+                                text-decoration: none;
+                            }
+                            
+                            .footer-lists li {
+                                font-size: 1em;
+                                color: grey;
+                                margin-bottom: 5px;
+                                text-decoration: none;
+                            }
+                            
+                            .footer-lists li a {
+                                text-decoration: none; /* Remove underlines */
+                                color: grey; /* Ensure the text color is grey */
+                            }
+                            
+                            .footer-lists li a:hover {
+                                text-decoration: underline; /* Add underlines on hover if desired */
+                            }
+                            
+                            .footer-copyright {
+                                text-align: center;
+                                margin-top: 40px;
+                                text-decoration: none;
+                            }
+                            
+                            .footer-copyright p {
+                                font-size: 1em;
+                                color: grey;
+                                text-decoration: none;
+                            }
+                            

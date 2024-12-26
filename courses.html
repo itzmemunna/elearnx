@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eLearnX Courses</title>
+    <link rel="stylesheet" href="styles.css">
+
+    
+        <style>
+            body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+header img {
+    max-width: 100px;
+    vertical-align: middle;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #0876e4; /* Blue color */
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(37, 37, 37, 0.1);
+}
+
+.course {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.course h2 {
+    color: #303030; /* Blue color */
+    cursor: pointer;
+    
+}
+
+.course .details-toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #0876e4; /* Blue color */
+    cursor: pointer;
+}
+
+.course-details {
+    display: none;
+    margin-top: 10px;
+    color: #666;
+}
+
+.skills {
+    margin-top: 10px;
+}
+
+.skills span {
+    display: inline-block;
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.register-btn {
+    display: inline-block;
+    background-color: #0876e4;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(to right, #6EACDA,#03346E );
+    border-bottom:2px solid black;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Center the links */ flex: 1;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #ddd;
+}
+.footer-section {
+                                background-color: #ffffff; /* Light grey background */
+                                padding: 40px;
+                            }
+                            
+                            .footer-lists {
+                                display: flex;
+                                justify-content: space-between;
+                                flex-wrap: wrap;
+                                text-decoration: none;
+                            }
+                            
+                            .footer-lists div {
+                                flex: 1;
+                                margin: 20px;
+                                text-decoration: none;
+                            }
+                            
+                            .footer-lists h3 {
+                                font-size: 1.2em;
+                                color: black;
+                                font-weight: bold;
+                                margin-bottom: 10px;
+                                text-decoration: none;
+                            }
+                            
+                            .footer-lists ul {
+                                list-style-type: none;
+                                padding: 0;
+                                text-decoration: none;
+                            }
+                            
+                            .footer-lists li {
+                                font-size: 1em;
+                                color: grey;
+                                margin-bottom: 5px;
+                                text-decoration: none;
+                            }
+                            
+                            .footer-lists li a {
+                                text-decoration: none; /* Remove underlines */
+                                color: grey; /* Ensure the text color is grey */
+                            }
+                            
+                            .footer-lists li a:hover {
+                                text-decoration: underline; /* Add underlines on hover if desired */
+                            }
+                            
+                            .footer-copyright {
+                                text-align: center;
+                                margin-top: 40px;
+                                text-decoration: none;
+                            }
+                            
+                            .footer-copyright p {
+                                font-size: 1em;
+                                color: grey;
+                                text-decoration: none;
+                            }
+                            header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+                            
+
+
+        </style>
+        <script>
+            function toggleDetails(id) {
+    const element = document.getElementById(id);
+    if (element.style.display === "none" || element.style.display === "") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+
+        </script>
+</head>
+<body>
+    <section>
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="https://getrapl.com/asia/wp-content/uploads/sites/4/2023/05/sa.png" alt="E-Learnx Logo">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="rewards.html">Rewards</a></li>
+                </ul>
+            </nav>
+        </header></section>
+        <center><h1 style="color: #03346E;">"E-LearnX Professional Certificate -  course series"</h1></center>
+
+    <main>
+        <div class="container">
+            <section class="course">
+                <h2 onclick="toggleDetails('course1-details')">Machine Learning with Python</h2>
+                <div class="details-toggle" onclick="toggleDetails('course1-details')">Course Details ▼</div>
+                <div id="course1-details" class="course-details">
+                    <p>Course 1 - 13 hours - 4.7 ★ (16,499 ratings)</p>
+                    <p><strong>What you'll learn:</strong></p>
+                    <ul>
+                        <li>Describe the various types of Machine Learning algorithms and when to use them</li>
+                        <li>Compare and contrast linear classification methods including multiclass prediction, support vector machines, and logistic regression</li>
+                        <li>Write Python code that implements various classification techniques including K-Nearest neighbors (KNN), decision trees, and regression trees</li>
+                        <li>Evaluate the results from simple linear, non-linear, and multiple regression on a data set using evaluation metrics</li>
+                    </ul>
+                    <p><strong>Skills you'll gain:</strong></p>
+                    <div class="skills">
+                        <span>Reinforcement Learning</span>
+                        <span>Transformers</span>
+                        <span>Convolutional Neural Networks (CNN)</span>
+                        <span>TensorFlow Keras</span>
+                        <span>Generative Adversarial Networks (GANs)</span>
+                    </div>
+                    <a href="valid.html" class="register-btn">Register Now</a>
+                </div>
+            </section><br><br>
+            <section class="course">
+                <h2 onclick="toggleDetails('course2-details')">Introduction to Deep Learning & Neural Networks with Keras</h2>
+                <div class="details-toggle" onclick="toggleDetails('course2-details')">Course Details ▼</div>
+                <div id="course2-details" class="course-details">
+                    <p>Course 2 - 8 hours - 4.7 ★ (1,649 ratings)</p>
+                    <p><strong>What you'll learn:</strong></p>
+                    <ul>
+                        <li>Understand the basics of deep learning and its applications</li>
+                        <li>Build and train neural networks using Keras and TensorFlow</li>
+                        <li>Apply neural network models to real-world problems</li>
+                        <li>Use advanced techniques such as convolutional and recurrent networks</li>
+                    </ul>
+                    <p><strong>Skills you'll gain:</strong></p>
+                    <div class="skills">
+                        <span>Generative AI applications</span>
+                        <span>Retrieval augmented generation (RAG)</span>
+                        <span>Vector Database</span>
+                        <span>LangChain</span>
+                        <span>Gradio</span>
+                    </div>
+                    <a href="valid.html" class="register-btn">Register Now</a>
+                </div>
+            </section><br><br>
+            <section class="course">
+                <h2 onclick="toggleDetails('course3-details')">Deep Learning with Keras and TensorFlow</h2>
+                <div class="details-toggle" onclick="toggleDetails('course3-details')">Course Details ▼</div>
+                <div id="course3-details" class="course-details">
+                    <p>Course 3 - 12 hours - 4.8 ★ (5,099 ratings)</p>
+                    <p><strong>What you'll learn:</strong></p>
+                    <ul>
+                        <li>Implement deep learning models using Keras and TensorFlow</li>
+                        <li>Explore various types of neural networks and their applications</li>
+                        <li>Understand the concepts of overfitting and underfitting</li>
+                        <li>Use techniques to optimize and tune deep learning models</li>
+                    </ul>
+                    <p><strong>Skills you'll gain:</strong></p>
+                    <div class="skills">
+                        <span>Deep Learning</span>
+                        <span>Keras</span>
+                        <span>TensorFlow</span>
+                        <span>Neural Networks</span>
+                        <span>Model Optimization</span>
+                    </div>
+                    <a href="valid.html" class="register-btn">Register Now</a>
+                </div>
+            </section><br><br>
+            <!-- Additional 5 courses -->
+            <section class="course">
+                <h2 onclick="toggleDetails('course4-details')">Advanced Machine Learning with Python</h2>
+                <div class="details-toggle" onclick="toggleDetails('course4-details')">Course Details ▼</div>
+                <div id="course4-details" class="course-details">
+                    <p>Course 4 - 14 hours - 4.6 ★ (10,799 ratings)</p>
+                    <p><strong>What you'll learn:</strong></p>
+                    <ul>
+                        <li>Implement advanced machine learning algorithms</li>
+                        <li>Work with large datasets and perform data preprocessing</li>
+                        <li>Understand feature engineering and selection techniques</li>
+                        <li>Evaluate and optimize machine learning models</li>
+                    </ul>
+                    <p><strong>Skills you'll gain:</strong></p>
+                    <div class="skills">
+                        <span>Data Preprocessing</span>
+                        <span>Feature Engineering</span>
+                        <span>Model Evaluation</span>
+                    </div>
+                    <a href="valid.html" class="register-btn">Register Now</a>
+                </div>
+            </section><br><br>
+            <section class="course">
+                <h2 onclick="toggleDetails('course5-details')">Data Science and Analytics</h2>
+                <div class="details-toggle" onclick="toggleDetails('course5-details')">Course Details ▼</div>
+                <div id="course5-details" class="course-details">
+                    <p>Course 5 - 10 hours - 4.7 ★ (12,399 ratings)</p>
+                    <p><strong>What you'll learn:</strong></p>
+                    <ul>
+                        <li>Understand data science concepts and methodologies</li>
+                        <li>Analyze and visualize data using Python and R</li>
+                        <li>Build and evaluate predictive models</li>
+                        <li>Communicate data findings effectively</li>
+                    </ul>
+                    <p><strong>Skills you'll gain:</strong></p>
+                    <div class="skills">
+                        <span>Data Visualization</span>
+                        <span>Predictive Modeling</span>
+                        <span>Data Communication</span>
+                    </div>
+                    <a href="valid.html" class="register-btn">Register Now</a>
+                </div>
+            </section><br><br>
+            <section class="course">
+                <h2 onclick="toggleDetails('course6-details')">Artificial Intelligence Foundations</h2>
+                <div class="details-toggle" onclick="toggleDetails('course6-details')">Course Details ▼</div>
+                <div id="course6-details" class="course-details">
+                    <p>Course 6 - 15 hours - 4.6 ★ (9,299 ratings)</p>
+                    <p><strong>What you'll learn:</strong></p>
+                    <ul>
+                        <li>Understand the basics of artificial intelligence and its applications</li>
+                        <li>Implement AI algorithms using Python</li>
+                        <li>Explore the ethical implications of AI</li>
+                        <li>Use AI to solve real-world problems</li>
+                    </ul>
+                    <p><strong>Skills you'll gain:</strong></p>
+                    <div class="skills">
+                        <span>Artificial Intelligence</span>
+                        <span>Python Programming</span>
+                        <span>Ethical AI</span>
+                    </div>
+                    <a href="valid.html" class="register-btn">Register Now</a>
+                </div>
+            </section><br><br>
+            <section class="course">
+                <h2 onclick="toggleDetails('course7-details')">Natural Language Processing with Python</h2>
+                <div class="details-toggle" onclick="toggleDetails('course7-details')">Course Details ▼</div>
+                <div id="course7-details" class="course-details">
+                    <p>Course 7 - 11 hours - 4.7 ★ (7,899 ratings)</p>
+                    <p><strong>What you'll learn:</strong></p>
+                    <ul>
+                        <li>Understand the basics of natural language processing</li>
+                        <li>Implement NLP algorithms using Python and NLTK</li>
+                        </ul>
+                
+                        <a href="valid.html" class="register-btn">Register Now</a>
+                        </div>
+                    
+                    </section><br><br><br>
+                    </div>
+                    </main></main>
+                    <footer class="footer-section"></footer>
+                     <div class="footer-lists"> <div> <h3>Get Started with AI</h3> <ul> <li>AWS & DLAI GenAI with LLMs Course</li> <li>DLAI AI For Everyone Course</li> <li>Google AI Essentials Course</li> <li>Google Cloud Introduction to Generative AI Course</li> <li>Google Prompting Essentials</li> <li>IBM AI Engineering Professional Certificate</li> <li>IBM Generative AI Fundamentals Specialization</li> <li>IBM Introduction to Artificial Intelligence (AI)</li> <li>Stanford AI in Healthcare Specialization</li> <li>DLAI Supervised Machine Learning: Regression and Classification</li> <li>Vanderbilt Prompt Engineering for ChatGPT Course</li> </ul> </div> <div> <h3>Popular Career Certificates</h3> <ul> <li>Adobe Content Creator Professional Certificate</li> <li>Google Cybersecurity Professional Certificate</li> <li>Google Data Analytics Professional Certificate</li> <li>Google Digital Marketing Professional Certificate</li> <li>Google IT Support Professional Certificate</li> <li>Google Project Management Professional Certificate</li> <li>Google UX Design Professional Certificate</li> <li>IBM Data Science Professional Certificate</li> <li>Meta Front-End Developer Professional Certificate</li> <li>Microsoft Power BI Data Analyst Professional Certificate</li> <li>All Career Certificates</li> </ul> </div> <div> <h3>Popular Subjects</h3> <ul> <li>Artificial Intelligence</li> <li>Cybersecurity</li> <li>Data Analytics</li> <li>Digital Marketing</li> <li>Generative AI</li> <li>Graphic Design</li> <li>Machine Learning</li> <li>Microsoft Excel</li> <li>Microsoft Power BI</li> <li>Project Management</li> <li>Python</li> <li>SQL</li> <li>All Courses</li> </ul> </div> <div> <h3>Popular Resources</h3> <ul> <li>High-Income Skills Worth Learning</li> <li>How to Get a PMP Certification</li> <li>Free IT Certifications and Courses</li> <li>Google Analytics Certification: Benefits and How to Get It</li> <li>Popular Cybersecurity Certifications</li> <li>Popular Data Analytics Certifications</li> <li>Popular IT Certifications</li> <li>What Does a Data Analyst Do?</li> <li>What Is the CAPM Certification</li> <li>Career Insights & Advice Hub</li> <li>Career Tools & Resource Hub</li> </ul> </div> </div> <footer class="footer-copyright"> <p>&copy; 2024 Elearnx Elearnx Inc. All rights reserved.</p>
+                    </footer>
+                     </body>
+                     </html>
+                        
